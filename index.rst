@@ -93,6 +93,100 @@ Namespaces are one honking great idea -- let's do more of those!
 
 .. include:: _templates/pykc-logo.rst
 
+Python Syntax & Datatypes
+=========================
+
+.. include:: _templates/pykc-logo.rst
+
+Lists
+-----
+
+::
+    
+    $ python
+    >>> x = ['one', 'two', 'three']
+    >>> x.append(4)
+    >>> x
+    ['one', 'two', 'three', 4]
+    >>> x.remove('one')
+    >>> x
+    ['two', 'three', 4]
+    >>> x.pop(1)
+    'three'
+    >>> x
+    ['two', 4]
+
+.. include:: _templates/pykc-logo.rst
+
+Lists
+-----
+
+::
+
+    $ python
+    >>> x = ['one', 'two', 'three', 4]
+    >>> x[1]
+    'two'
+    >>> x[0:2]
+    ['one', 'two']
+    >>> x[:-1]
+    ['one', 'two', 'three']
+    >>> x[-1]
+    4
+    >>> x[0::2]
+    ['one', 'three']
+
+.. include:: _templates/pykc-logo.rst
+
+List Comprehensions
+-------------------
+
+::
+
+    $ python
+    >>> nums = [1, 2, 3, 4]
+    >>> [x * 2 for x in nums]
+    [2, 4, 6, 8]
+    >>> [x for x in nums if x % 2 == 0]
+    [2, 4]
+
+.. include:: _templates/pykc-logo.rst
+
+List Comprehensions
+===================
+
+::
+
+    $ python
+    >>> s = 'string-with-palindromes-like-abbalabba'
+    >>> l = len(s)
+    >>> [s[x:y] for x in range(l) for y in range(x,l+1) if p(s[x:y])] 
+    wat
+
+.. image:: images/wat-3.jpeg
+.. image:: images/wat-1.jpeg
+.. image:: images/wat-2.jpeg
+
+Powerful, but watch out for readability. 
+
+**Readability counts & Simple is better than complex**
+
+.. include:: _templates/pykc-logo.rst
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
