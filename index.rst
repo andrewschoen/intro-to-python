@@ -115,6 +115,8 @@ Lists
     'three'
     >>> x
     ['two', 4]
+    >>> x.insert(0, "one")
+    ['one', 'two', 4]
 
 .. include:: _templates/pykc-logo.rst
 
@@ -172,6 +174,140 @@ Powerful, but watch out for readability.
 **Readability counts & Simple is better than complex**
 
 .. include:: _templates/pykc-logo.rst
+
+Dictionaries
+------------
+
+::
+
+    $ python
+    >>> x = {}
+    >>> x
+    {}
+    >>> x = dict()
+    >>> x
+    {}
+    >>> x = {'hello':'world'}
+    >>> x
+    {'hello': 'world'}
+
+.. include:: _templates/pykc-logo.rst
+
+Dictionaries
+------------
+
+::
+
+    $ python
+    >>> opposites = {'up':'down', 'left':'right'}
+    >>> opposites
+    {'up': 'down', 'left': 'right'}
+    >>> opposites['hot'] = 'cold'
+    >>> oposites
+    {'hot': 'cold', 'up': 'down', 'left': 'right'}
+    >>> del opposites['up']
+    >>> opposites
+    {'tall': 'short', 'hot': 'cold', 'left': 'right'}
+    >>> opposites['tall']
+    'short'
+
+.. include:: _templates/pykc-logo.rst
+
+Dictionaries
+------------
+
+::
+
+    $ python
+    >>> opposites = {"up":"down", "left":"right"}
+    >>> opposites['dark']
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    KeyError: 'dark'
+    >>> opposites.get('dark', 'light')
+    'light'
+
+.. include:: _templates/pykc-logo.rst
+
+Dictionaries
+------------
+
+::
+
+    $ python
+    >>> opposites = {"up":"down", "left":"right"}
+    >>> opposites.keys()
+    ['up', 'left']
+    >>> opposites.values()
+    ['down', 'right']
+    >>> ["The opposite of %s is %s" % (k, v) for 
+             k, v in opposites.iteritems()]
+    ['The opposite of up is down', 'The opposite of left is right']
+
+.. include:: _templates/pykc-logo.rst
+
+Tuples
+------
+
+::
+
+    $ python
+    >>> nums = (1, 2, 3)
+    >>> abcs = ('a', 'b', 'c')
+    >>> nums[1]
+    2
+    >>> # tuples can be nested
+    ... nested = ('x', 'y', 'z'), nums, abcs
+    >>> nested
+    (('x', 'y', 'z'), (1, 2, 3), ('a', 'b', 'c'))
+
+.. include:: _templates/pykc-logo.rst
+
+Tuples
+------
+
+::
+
+    $ python
+    >>> foo = (1, 2)
+    >>> foo[0] = 3
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: 'tuple' object does not support item assignment
+
+Tuples are immutable
+
+.. include:: _templates/pykc-logo.rst
+
+Variables
+---------
+
+::
+
+    $ python
+    >>> x
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    NameError: name 'x' is not defined
+    >>> x = 1
+    >>> x
+    1
+    >>> y = (1, 2, 3)
+    >>> (a, b, c) = y
+    >>> a
+    1
+    >>> b
+    2
+    >>> c
+    3
+
+.. include:: _templates/pykc-logo.rst
+
+
+
+
+
+
 
 
 
