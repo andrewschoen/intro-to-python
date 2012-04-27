@@ -312,15 +312,6 @@ Variables
     1
     >>> b
     2
-
-.. include:: _templates/pykc-logo.rst
-
-Variables
----------
-
-::
-
-    $ python
     >>> a = b = c = 1
     >>> a, b, c
     (1, 1, 1)
@@ -586,6 +577,10 @@ Generators
     ...     for index in range(len(data)-1, -1, -1):
     ...         yield data[index]
     ... 
+    >>> reverse('Andy')
+    <generator object reverse at 0x1004992d0>
+    >>> reverse('Andy').next()
+    'y'
     >>> for char in reverse('Andy'):
     ...     print char
     ... 
