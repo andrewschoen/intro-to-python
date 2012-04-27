@@ -783,6 +783,8 @@ Beginners Python Workshop
 
 The Beginners Python Workshop is a 2-day free event focused on teaching the basics of programming in the Python language.  Everybody is encouraged to attend, regardless of your previous experience with programming.
 
+http://www.meetup.com/pythonkc/events/62339552/
+
 Friday, June 22nd 6pm - 10pm
 
 Saturday, June 23rd 10am - 4pm
