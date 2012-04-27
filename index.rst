@@ -767,6 +767,8 @@ ________________
 Python Projects
 _______________
 
+If you'd like to learn more about different projects in Python, check these out.  Pip and virtualenv are a must for any Python dev.
+
 * `pip`_
 * `virtualenv`_
 * `Django`_ 
@@ -782,6 +784,33 @@ _______________
 .. _fabric: http://docs.fabfile.org/en/1.4.1/index.html
 
 .. include:: _templates/pykc-logo.rst
+
+Beginners Python Workshop
+==========================
+
+The Beginners Python Workshop is a 2-day free event focused on teaching the basics of programming in the Python language.  Everybody is encouraged to attend, regardless of your previous experience with programming.
+
+Friday, June 22nd 6pm - 10pm
+
+Saturday, June 23rd 10am - 4pm
+
+UMKC Campus - 302 Flarsheim Hall
+
+.. include:: _templates/pykc-logo.rst
+
+Thanks!
+=======
+
+@andrewschoen
+
+@pythonkc
+
+http://www.meetup.com/pythonkc
+
+.. include:: _templates/pykc-logo.rst
+
+
+
 
 
 
