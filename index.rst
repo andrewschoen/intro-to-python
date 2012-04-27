@@ -1,4 +1,4 @@
-.. Intro to Python documentation master file, created by
+.. Intro to Python master file, created by
    sphinx-quickstart on Sun Apr 22 09:58:05 2012.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -480,6 +480,10 @@ if
     ...     print "hi world"
     ... 
     hi world
+    >>> if True and True:
+    ...    print "doubly true"
+    ...
+    doubly true
 
 .. include:: _templates/pykc-logo.rst
 
@@ -489,6 +493,10 @@ if
 ::
 
     $ python
+    >>> if True or False:
+    ...    print "half true"
+    ...
+    half true
     >>> phrase = "hello world"
     >>> if not phrase:
     ...    print "no phrase"
