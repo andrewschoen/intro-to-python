@@ -579,8 +579,6 @@ Generators
     ... 
     >>> reverse('Andy')
     <generator object reverse at 0x1004992d0>
-    >>> reverse('Andy').next()
-    'y'
     >>> for char in reverse('Andy'):
     ...     print char
     ... 
