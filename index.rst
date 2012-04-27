@@ -807,6 +807,8 @@ Thanks!
 
 http://www.meetup.com/pythonkc
 
+https://github.com/andrewschoen/intro-to-python
+
 .. include:: _templates/pykc-logo.rst
 
 
