@@ -110,6 +110,146 @@ Python Syntax & Datatypes
 
 .. include:: _templates/pykc-logo.rst
 
+Math
+----
+
+::
+
+    $ python
+    >>> 2 + 2
+    4
+    >>> 4 - 2
+    2
+    >>> 2 * 3
+    6
+    >>> 1 / 2
+    0
+    >>> 1.0 / 2
+    0.5
+
+.. include:: _templates/pykc-logo.rst
+
+Variables
+---------
+
+::
+
+    $ python
+    >>> 4
+    4
+    >>> x
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    NameError: name 'x' is not defined
+    >>> x = 4
+    >>> x
+    4
+
+.. include:: _templates/pykc-logo.rst
+
+Variables
+---------
+
+::
+
+    $ python
+    >>> y = (1, 2, 3)
+    >>> a, b, c = y
+    >>> a
+    1
+    >>> b
+    2
+    >>> a = b = c = 1
+    >>> a, b, c
+    (1, 1, 1)
+
+.. include:: _templates/pykc-logo.rst
+
+Strings
+-------
+
+::
+
+    $ python
+    >>> "Hello"
+    'Hello'
+    >>> name = "Andrew"
+    >>> print "Hello " + name
+    Hello Andrew
+
+.. include:: _templates/pykc-logo.rst
+
+Strings
+-------
+
+::
+
+    $ python
+    >>> print 'Hello'
+    Hello
+    >>> print "Hello"
+    Hello
+    >>> print 'I'm a happy camper'
+      File "<stdin>", line 1
+        print 'I'm a happy camper'
+                 ^
+    SyntaxError: invalid syntax
+    >>> print "I'm a happy camper"
+    I'm a happy camper
+
+.. include:: _templates/pykc-logo.rst
+
+Strings
+-------
+
+::
+
+    $ python
+    >>> "Hello " + 1
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: cannot concatenate 'str' and 'int' objects
+    >>> "Hello " * 2
+    'Hello Hello '
+
+.. include:: _templates/pykc-logo.rst
+
+Strings
+-------
+
+::
+
+    $ python
+    >>> print len('Hello')
+    5
+    >>> print len("")
+    0
+    >>> fish = "humuhumunukunukuapuaʻa"
+    >>> length = str(len(fish))
+    >>> print fish + " is a Hawaiian fish whose name is " + length + " characters long."
+    humuhumunukunukuapuaʻa is a Hawaiian fish whose name is 23 characters long.
+
+Strings
+-------
+
+::
+
+    $ python
+    >>> foo = "hello"
+    >>> bar = "world"
+    >>> "%s %s!!" % (foo, bar)
+    'hello world!!'
+    >>> foo + " " + bar
+    'hello world!!'
+    >>> "The answer is %d" % 42
+    'The answer is 42'
+    >>> ",".join((foo, bar))
+    'hello,world'
+    >>>>>> ",".join((foo, bar)).split(',')
+    ['hello', 'world']
+
+.. include:: _templates/pykc-logo.rst
+
 Lists
 -----
 
@@ -286,53 +426,6 @@ Tuples
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
     TypeError: 'tuple' object does not support item assignment
-
-.. include:: _templates/pykc-logo.rst
-
-Variables
----------
-
-::
-
-    $ python
-    >>> x
-    Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
-    NameError: name 'x' is not defined
-    >>> x = 1
-    >>> x
-    1
-    >>> y = (1, 2, 3)
-    >>> a, b, c = y
-    >>> a
-    1
-    >>> b
-    2
-    >>> a = b = c = 1
-    >>> a, b, c
-    (1, 1, 1)
-
-.. include:: _templates/pykc-logo.rst
-
-
-Strings
--------
-
-::
-
-    $ python
-    >>> foo = "hello"
-    >>> bar = "world"
-    >>> "%s %s!!" % (foo, bar)
-    'hello world!!'
-    >>> foo + " " + bar
-    'hello world!!'
-    >>> "The answer is %d" % 42
-    'The answer is 42'
-    >>> ",".join((foo, bar))
-    'hello,world'
-    >>>>>> ",".join((foo, bar)).split(',')
-    ['hello', 'world']
 
 .. include:: _templates/pykc-logo.rst
 
@@ -733,6 +826,19 @@ Built-ins
 ::
 
     $ python
+    >>> import random
+    >>> movies = ["Star Wars", "Once", "Kung Fu Panda"]
+    >>> random.choice(movies)
+    'Once'
+
+.. include:: _templates/pykc-logo.rst
+
+Built-ins
+---------
+
+::
+
+    $ python
     >>> class Person(object):
     ...     def __init__(self, name="Andrew"):
     ...             self.name=name
@@ -779,21 +885,6 @@ If you'd like to learn more about different projects in Python, check these out.
 .. _south: http://south.aeracode.org/
 .. _Sphinx: http://sphinx.pocoo.org/
 .. _fabric: http://docs.fabfile.org/en/1.4.1/index.html
-
-.. include:: _templates/pykc-logo.rst
-
-Beginners Python Workshop
-==========================
-
-The Beginners Python Workshop is a 2-day free event focused on teaching the basics of programming in the Python language.  Everybody is encouraged to attend, regardless of your previous experience with programming.
-
-http://www.meetup.com/pythonkc/events/62339552/
-
-Friday, June 22nd 6pm - 10pm
-
-Saturday, June 23rd 10am - 4pm
-
-UMKC Campus - 302 Flarsheim Hall
 
 .. include:: _templates/pykc-logo.rst
 
