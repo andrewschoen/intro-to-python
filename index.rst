@@ -126,6 +126,11 @@ Math
     0
     >>> 1.0 / 2
     0.5
+    >>> 4 % 2
+    0
+    >>> 3 % 2
+    1
+
 
 .. include:: _templates/pykc-logo.rst
 
@@ -185,8 +190,6 @@ Strings
 ::
 
     $ python
-    >>> print 'Hello'
-    Hello
     >>> print "Hello"
     Hello
     >>> print 'I'm a happy camper'
@@ -306,26 +309,6 @@ List Comprehensions
 
 .. include:: _templates/pykc-logo.rst
 
-List Comprehensions
-===================
-
-::
-
-    $ python
-    >>> s = 'string-with-palindromes-like-abbalabba'
-    >>> l = len(s)
-    >>> [s[x:y] for x in range(l) for y in range(x,l+1) if p(s[x:y])] 
-    wat
-
-.. image:: images/wat-3.jpeg
-.. image:: images/wat-1.jpeg
-.. image:: images/wat-2.jpeg
-
-Powerful, but watch out for readability. 
-
-**Readability counts & Simple is better than complex**
-
-.. include:: _templates/pykc-logo.rst
 
 Dictionaries
 ------------
