@@ -1,0 +1,12 @@
+.pykc-logo {position:absolute;top:568px;left:753px;}
+
+h1 {margin-top:140px}
+h2 {font-size:60px;bottom:65px;}
+
+#the-zen-of-python h1, #the-zen-of-python-cont h1 {margin-top:0px;font-size:50px;}
+#the-zen-of-python p, #the-zen-of-python-cont p {margin:0 0 0 0;padding-bottom:15px;padding-right:80px;font-size:29px;}
+
+#id4 h1 {margin-top:0px;}
+
+#sponsors h1 {display:none;}
+#sponsors img {top:29px; left:9px; position:absolute;}

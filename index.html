@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Intro to Python &mdash; Intro to Python 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/slides.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    
+
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <link rel="top" title="Intro to Python 1.0 documentation" href="#" /> 
+  </head>
+  <body>
+
+<section class='slides layout-regular'>
+
+
+  <article class="slide level-1" id="intro-to-python">
+<h1>Intro to Python<a class="headerlink" href="#intro-to-python" title="Permalink to this headline">¶</a></h1>
+<p>Andrew Schoen | &#64;andrewschoen | &#64;pythonkc</p>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+
+</article>
+<article class="slide level-2" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Python has a culture which finds an ideal balance between fast-moving innovation and diligent caution. It emphasizes readability, minimizes &quot;magic,&quot; treats documentation as a first-class concern, [...] It blends approachability for beginners with maintainability for large projects, which has enabled its presence in fields as diverse as scientific computing, video games, systems automation, and the web.</p>
+<p>Source: <a class="reference external" href="http://blog.heroku.com/archives/2011/9/28/python_and_django/">Heroku - Python and Django</a></p>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id1">
+<h2>Python<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>dynamic and strongly typed</p>
+<p>interpreted</p>
+<p>whitespace is significant</p>
+<p>multi-paradigm (OO, impertative, functional)</p>
+<p>everything is an object</p>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id2">
+<h2>Python<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Created by Guido van Rossum in 1991</p>
+<p>Is very diverse in it's usuage.  Science, gaming, web and systems automation.</p>
+<p>Has a very clearly-stated list of values</p>
+<p>Development is driven through the use of PEPs (Python Enhancement Proposals)</p>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-1" id="python-c-import-this">
+<h1>python -c &quot;import this&quot;<a class="headerlink" href="#python-c-import-this" title="Permalink to this headline">¶</a></h1>
+<p>The Zen of Python, by Tim Peters</p>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-1" id="the-zen-of-python">
+<h1>The Zen of Python<a class="headerlink" href="#the-zen-of-python" title="Permalink to this headline">¶</a></h1>
+<p>Beautiful is better than ugly.</p>
+<p>Explicit is better than implicit.</p>
+<p>Simple is better than complex.</p>
+<p>Complex is better than complicated.</p>
+<p>Flat is better than nested.</p>
+<p>Sparse is better than dense.</p>
+<p>Readability counts.</p>
+<p>Special cases aren't special enough to break the rules.</p>
+<p>Although practicality beats purity.</p>
+<p>Errors should never pass silently.</p>
+<p>Unless explicitly silenced.</p>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-1" id="the-zen-of-python-cont">
+<h1>The Zen of Python (cont)<a class="headerlink" href="#the-zen-of-python-cont" title="Permalink to this headline">¶</a></h1>
+<p>In the face of ambiguity, refuse the temptation to guess.</p>
+<p>There should be one-- and preferably only one --obvious way to do it.</p>
+<p>Although that way may not be obvious at first unless you're Dutch.</p>
+<p>Now is better than never.</p>
+<p>Although never is often better than <em>right</em> now.</p>
+<p>If the implementation is hard to explain, it's a bad idea.</p>
+<p>If the implementation is easy to explain, it may be a good idea.</p>
+<p>Namespaces are one honking great idea -- let's do more of those!</p>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-1" id="python-syntax-datatypes">
+<h1>Python Syntax &amp; Datatypes<a class="headerlink" href="#python-syntax-datatypes" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+
+</article>
+<article class="slide level-2" id="math">
+<h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; 2 + 2
+4
+&gt;&gt;&gt; 4 - 2
+2
+&gt;&gt;&gt; 2 * 3
+6
+&gt;&gt;&gt; 1 / 2
+0
+&gt;&gt;&gt; 1.0 / 2
+0.5
+&gt;&gt;&gt; 4 % 2
+0
+&gt;&gt;&gt; 3 % 2
+1</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; 4
+4
+&gt;&gt;&gt; x
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+NameError: name 'x' is not defined
+&gt;&gt;&gt; x = 4
+&gt;&gt;&gt; x
+4</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id3">
+<h2>Variables<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; y = (1, 2, 3)
+&gt;&gt;&gt; a, b, c = y
+&gt;&gt;&gt; a
+1
+&gt;&gt;&gt; b
+2
+&gt;&gt;&gt; a = b = c = 1
+&gt;&gt;&gt; a, b, c
+(1, 1, 1)</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; "Hello"
+'Hello'
+&gt;&gt;&gt; name = "Andrew"
+&gt;&gt;&gt; print "Hello " + name
+Hello Andrew</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id4">
+<h2>Strings<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; print "Hello"
+Hello
+&gt;&gt;&gt; print 'I'm a happy camper'
+  File "&lt;stdin&gt;", line 1
+    print 'I'm a happy camper'
+             ^
+SyntaxError: invalid syntax
+&gt;&gt;&gt; print "I'm a happy camper"
+I'm a happy camper</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id5">
+<h2>Strings<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; "Hello " + 1
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: cannot concatenate 'str' and 'int' objects
+&gt;&gt;&gt; "Hello " * 2
+'Hello Hello '</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id6">
+<h2>Strings<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; print len('Hello')
+5
+&gt;&gt;&gt; print len("")
+0
+&gt;&gt;&gt; fish = "humuhumunukunukuapuaʻa"
+&gt;&gt;&gt; length = str(len(fish))
+&gt;&gt;&gt; print fish + " is a Hawaiian fish whose name is " + length + " characters long."
+humuhumunukunukuapuaʻa is a Hawaiian fish whose name is 23 characters long.</pre>
+</div>
+</article>
+<article class="slide level-2" id="id7">
+<h2>Strings<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; foo = "hello"
+&gt;&gt;&gt; bar = "world"
+&gt;&gt;&gt; "%s %s!!" % (foo, bar)
+'hello world!!'
+&gt;&gt;&gt; foo + " " + bar
+'hello world!!'
+&gt;&gt;&gt; "The answer is %d" % 42
+'The answer is 42'
+&gt;&gt;&gt; ",".join((foo, bar))
+'hello,world'
+&gt;&gt;&gt;&gt;&gt;&gt; ",".join((foo, bar)).split(',')
+['hello', 'world']</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; x = ['one', 'two', 'three']
+&gt;&gt;&gt; x.append(4)
+&gt;&gt;&gt; x
+['one', 'two', 'three', 4]
+&gt;&gt;&gt; x.remove('one')
+&gt;&gt;&gt; x
+['two', 'three', 4]
+&gt;&gt;&gt; x.pop(1)
+'three'
+&gt;&gt;&gt; x
+['two', 4]
+&gt;&gt;&gt; x.insert(0, "one")
+['one', 'two', 4]</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id8">
+<h2>Lists<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; x = ['one', 'two', 'three', 4]
+&gt;&gt;&gt; x[1]
+'two'
+&gt;&gt;&gt; x[0:2]
+['one', 'two']
+&gt;&gt;&gt; x[:-1]
+['one', 'two', 'three']
+&gt;&gt;&gt; x[-1]
+4
+&gt;&gt;&gt; x[0::2]
+['one', 'three']</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="list-comprehensions">
+<h2>List Comprehensions<a class="headerlink" href="#list-comprehensions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; nums = [1, 2, 3, 4]
+&gt;&gt;&gt; [x * 2 for x in nums]
+[2, 4, 6, 8]
+&gt;&gt;&gt; [x for x in nums if x % 2 == 0]
+[2, 4]</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="dictionaries">
+<h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; x = {}
+&gt;&gt;&gt; x
+{}
+&gt;&gt;&gt; x = dict()
+&gt;&gt;&gt; x
+{}
+&gt;&gt;&gt; x = {'hello':'world'}
+&gt;&gt;&gt; x
+{'hello': 'world'}</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id9">
+<h2>Dictionaries<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; opposites = {'up':'down', 'left':'right'}
+&gt;&gt;&gt; opposites
+{'up': 'down', 'left': 'right'}
+&gt;&gt;&gt; opposites['hot'] = 'cold'
+&gt;&gt;&gt; oposites
+{'hot': 'cold', 'up': 'down', 'left': 'right'}
+&gt;&gt;&gt; del opposites['up']
+&gt;&gt;&gt; opposites
+{'tall': 'short', 'hot': 'cold', 'left': 'right'}
+&gt;&gt;&gt; opposites['tall']
+'short'</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id10">
+<h2>Dictionaries<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; opposites = {"up":"down", "left":"right"}
+&gt;&gt;&gt; opposites['dark']
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+KeyError: 'dark'
+&gt;&gt;&gt; opposites.get('dark', 'light')
+'light'</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id11">
+<h2>Dictionaries<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; opposites = {"up":"down", "left":"right"}
+&gt;&gt;&gt; opposites.keys()
+['up', 'left']
+&gt;&gt;&gt; opposites.values()
+['down', 'right']
+&gt;&gt;&gt; ["The opposite of %s is %s" % (k, v) for
+         k, v in opposites.iteritems()]
+['The opposite of up is down', 'The opposite of left is right']</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="tuples">
+<h2>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; nums = (1, 2, 3)
+&gt;&gt;&gt; abcs = ('a', 'b', 'c')
+&gt;&gt;&gt; nums[1]
+2
+&gt;&gt;&gt; # tuples can be nested
+... nested = ('x', 'y', 'z'), nums, abcs
+&gt;&gt;&gt; nested
+(('x', 'y', 'z'), (1, 2, 3), ('a', 'b', 'c'))</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id12">
+<h2>Tuples<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; foo = (1, 2)
+&gt;&gt;&gt; foo[0] = 3
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: 'tuple' object does not support item assignment</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; def add(x, y):
+...     return x + y
+...
+&gt;&gt;&gt; add(2, 4)
+ 6
+&gt;&gt;&gt; foo = (4, 6, add)
+&gt;&gt;&gt; foo[2](foo[0], foo[1])
+10
+&gt;&gt;&gt; def bar(greeting, bangs=4):
+...     print "%s%s" % (greeting, "!" * bangs)
+...
+&gt;&gt;&gt; bar("hello world", bangs=6)
+hello world!!!!!!</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id13">
+<h2>Functions<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; def foo(*args, **kwargs):
+...     for arg in args:
+...         print arg
+...     for k, v in kwargs.iteritems():
+...         print "%s=%s" % (k, v)
+...
+&gt;&gt;&gt; foo("1", "2", key="value")
+1
+2
+key=value</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id14">
+<h2>Functions<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; def foo(name):
+...     def bar():
+...         return "Hello from %s" % name
+...     print bar()
+...
+&gt;&gt;&gt; foo('Andrew')
+Hello from Andrew</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id15">
+<h2>Functions<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; def f(x):
+...     return x*2
+...
+&gt;&gt;&gt; f(3)
+6
+&gt;&gt;&gt; times_two = lambda x: x*2
+&gt;&gt;&gt; times_two(3)
+6
+&gt;&gt;&gt; (lambda x: x*2)(3)
+6</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; class Person(object):
+...     def __init__(self, name="Andrew"):
+...         self.name = name
+...     def my_name(self):
+...         print "My name is %s" % self.name
+...
+&gt;&gt;&gt; kid = Person(name="Anderson")
+&gt;&gt;&gt; kid.my_name()
+My name is Anderson
+&gt;&gt;&gt; me = Person()
+&gt;&gt;&gt; me.my_name()
+My name is Andrew</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id16">
+<h2>Classes<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; class Bar(object):
+...     def from_bar(self):
+...         print "from bar"
+&gt;&gt;&gt; class Baz(object):
+...     def from_baz(self):
+...         print "from baz"
+&gt;&gt;&gt; class Foo(Bar, Baz):
+...     def from_baz(self):
+...         print "overloaded!"
+&gt;&gt;&gt; x = Foo()
+&gt;&gt;&gt; x.from_bar()
+from bar
+&gt;&gt;&gt; x.from_baz()
+overloaded!</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-1" id="control-structures">
+<h1>Control Structures<a class="headerlink" href="#control-structures" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+
+</article>
+<article class="slide level-2" id="if">
+<h2>if<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; if True:
+...     print "of course it is true"
+...
+of course it is true
+&gt;&gt;&gt; phrase = "hello world"
+&gt;&gt;&gt; if "world" in phrase:
+...     print "hi world"
+...
+hi world
+&gt;&gt;&gt; if True and True:
+...    print "doubly true"
+...
+doubly true</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id17">
+<h2>if<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; if True or False:
+...    print "half true"
+...
+half true
+&gt;&gt;&gt; phrase = "hello world"
+&gt;&gt;&gt; if not phrase:
+...    print "no phrase"
+... elif "hello world!!" == phrase:
+...    print "!!!"
+... else:
+...    print phrase
+...
+hello world</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="for">
+<h2>for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; for x in range(3):
+...     print x * 2
+...
+0
+2
+4
+&gt;&gt;&gt; opposites = {"up":"down","left":"right"}
+&gt;&gt;&gt; for k, v in opposites.items():
+...     print "The opposite of %s is %s" % (k, v)
+...
+The opposite of up is down
+The opposite of left is right</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id18">
+<h2>for<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; abcs = "abc"
+&gt;&gt;&gt; for index, char in enumerate(abcs):
+...     print index, char
+...
+0 a
+1 b
+2 c
+&gt;&gt;&gt; for char in abcs:
+...     print char
+...
+a
+b
+c</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id19">
+<h2>for<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; abcs = "abc"
+&gt;&gt;&gt; for char in abcs:
+...     if "b" in char:
+...         continue
+...     print char
+...
+a
+c
+&gt;&gt;&gt; for char in abcs:
+...     if "b" in char:
+...         break
+...     print char
+...
+a</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="generators">
+<h2>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; def reverse(data):
+...     for index in range(len(data)-1, -1, -1):
+...         yield data[index]
+...
+&gt;&gt;&gt; reverse('Andy')
+&lt;generator object reverse at 0x1004992d0&gt;
+&gt;&gt;&gt; for char in reverse('Andy'):
+...     print char
+...
+y
+d
+n
+A
+&gt;&gt;&gt; nums = (i*i for i in range(10))
+&gt;&gt;&gt; sum(nums)  # sum of squares
+285</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="while">
+<h2>while<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; i = 0
+&gt;&gt;&gt; while i &lt; 4:
+...     print i
+...     i += 1
+...
+0
+1
+2
+3</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="exception-handling">
+<h2>Exception Handling<a class="headerlink" href="#exception-handling" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; def divide(x, y):
+...     try:
+...         result = x / y
+...     except ZeroDivisionError, e:
+...         print "division by zero"
+...     else:
+...         print "result is %d" % result
+...     finally:
+...         print "should always print"
+...
+&gt;&gt;&gt; divide(2, 1)
+result is 2
+should always print
+&gt;&gt;&gt; divide(2, 0)
+division by zero
+should always print</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id20">
+<h2>Exception Handling<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; try:
+...     raise NameError("hello world")
+... except NameError:
+...     print 'Got a NameError'
+...     raise
+...
+Got a NameError
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 2, in &lt;module&gt;
+NameError: hello world</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-1" id="built-ins">
+<h1>Built-ins<a class="headerlink" href="#built-ins" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+
+</article>
+<article class="slide level-2" id="id21">
+<h2>Built-ins<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; x = [True, True, False]
+&gt;&gt;&gt; any(x)
+True
+&gt;&gt;&gt; all(x)
+False
+&gt;&gt;&gt; dir(x)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__',
+ '__delslice__', '__doc__', '__eq__', '__format__', '__ge__',
+ '__getattribute__', '__getitem__', '__getslice__', '__gt__', '__hash__',
+  '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__',
+   '__lt__', '__mul__', '__ne__', '__new__', '__reduce__',
+   '__reduce_ex__', '__repr__', '__reversed__', '__rmul__',
+   '__setattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__',
+   '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert',
+   'pop', 'remove', 'reverse', 'sort']</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id22">
+<h2>Built-ins<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; x = "100"
+&gt;&gt;&gt; int(x)
+100
+&gt;&gt;&gt; y = 100
+&gt;&gt;&gt; str(y)
+'100'
+&gt;&gt;&gt; len(x)
+3
+&gt;&gt;&gt; type(y)
+&lt;type 'int'&gt;</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id23">
+<h2>Built-ins<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; nums = [1, 2, 3, 4]
+&gt;&gt;&gt; map(lambda x: x*2, nums)
+[2, 4, 6, 8]
+&gt;&gt;&gt; abcs = ['a','b','c','d']
+&gt;&gt;&gt; zip(nums, abcs)
+[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]
+&gt;&gt;&gt; filter(lambda x: x % 2 == 0, nums)
+[2, 4]
+&gt;&gt;&gt; max(nums)
+4
+&gt;&gt;&gt; min(nums)
+1</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id24">
+<h2>Built-ins<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; import random
+&gt;&gt;&gt; movies = ["Star Wars", "Once", "Kung Fu Panda"]
+&gt;&gt;&gt; random.choice(movies)
+'Once'</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-2" id="id25">
+<h2>Built-ins<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ python
+&gt;&gt;&gt; class Person(object):
+...     def __init__(self, name="Andrew"):
+...             self.name=name
+...     def my_name(self):
+...             print "My name is %s" % self.name
+...
+&gt;&gt;&gt; me = Person()
+&gt;&gt;&gt; hasattr(me, 'my_name')
+True
+&gt;&gt;&gt; attr = getattr(me, 'my_name')
+&gt;&gt;&gt; attr
+&lt;bound method Person.my_name of &lt;__main__.Person object at 0x10049cc50&gt;&gt;
+&gt;&gt;&gt; attr() if callable(attr) else attr
+My name is Andrew</pre>
+</div>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+
+</article>
+<article class="slide level-3" id="python-resources">
+<h3>Python Resources<a class="headerlink" href="#python-resources" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.python.org">http://docs.python.org</a></li>
+<li><a class="reference external" href="http://learnpythonthehardway.org/">http://learnpythonthehardway.org/</a></li>
+<li><a class="reference external" href="http://diveintopython.net">http://diveintopython.net</a></li>
+<li><a class="reference external" href="http://codingbat.com/python">http://codingbat.com/python</a></li>
+<li><a class="reference external" href="http://pythonchallenge.com">http://pythonchallenge.com</a></li>
+</ul>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-3" id="python-projects">
+<h3>Python Projects<a class="headerlink" href="#python-projects" title="Permalink to this headline">¶</a></h3>
+<p>If you'd like to learn more about different projects in Python, check these out.  Pip and virtualenv are a must for any Python dev.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://pypi.python.org/pypi/pip">pip</a></li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/virtualenv">virtualenv</a></li>
+<li><a class="reference external" href="https://www.djangoproject.com/">Django</a></li>
+<li><a class="reference external" href="http://south.aeracode.org/">south</a></li>
+<li><a class="reference external" href="http://sphinx.pocoo.org/">Sphinx</a></li>
+<li><a class="reference external" href="http://docs.fabfile.org/en/1.4.1/index.html">fabric</a></li>
+</ul>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+<article class="slide level-1" id="thanks">
+<h1>Thanks!<a class="headerlink" href="#thanks" title="Permalink to this headline">¶</a></h1>
+<p>&#64;andrewschoen</p>
+<p>&#64;pythonkc</p>
+<p><a class="reference external" href="http://www.meetup.com/pythonkc">http://www.meetup.com/pythonkc</a></p>
+<p><a class="reference external" href="https://github.com/andrewschoen/intro-to-python">https://github.com/andrewschoen/intro-to-python</a></p>
+<img alt="_images/pykc-vertical-small.jpg" class="pykc-logo" src="_images/pykc-vertical-small.jpg" />
+</article>
+
+
+</section>
+  </body>
+</html>
